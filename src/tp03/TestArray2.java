@@ -34,6 +34,7 @@ public class TestArray2 {
 		      System.out.println("Les doublons dans le tableau : ");
 		      
 		      int temp;
+		      // boucle
 		      
 		      for(int i = 0; i < array.length; i++) {
 		    	

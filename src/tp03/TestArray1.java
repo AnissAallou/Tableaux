@@ -34,7 +34,7 @@ public class TestArray1 {
 				if(array[i]>3) {
 				System.out.print(array[i] + " ");    
 				}
-			}
+			} 
 			
 			System.out.println(" ");
 			

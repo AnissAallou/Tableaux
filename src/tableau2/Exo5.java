@@ -1,7 +1,7 @@
 package tableau2;
 
 public class Exo5 {
-	
+	 
 	public static void main(String[] args) {
 	
 	 System.out.println("Exercice 2 Tableaux multidimensionnels");

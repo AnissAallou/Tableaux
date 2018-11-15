@@ -1,7 +1,7 @@
 package tableau2;
 
 public class Exo1 {
-	
+	 
 	public static void main(String[] args) {
 	
 		int[][] tab = new int[6][13];

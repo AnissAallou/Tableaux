@@ -1,6 +1,6 @@
 package tp03;
 
-
+ 
 public class TestArrayTri {
 
 		public static void main(String[] args) {

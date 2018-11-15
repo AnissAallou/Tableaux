@@ -18,7 +18,7 @@ public class Exo4 {
 		int mmax = 0;
 
 		int[][] table = new int[12][8];
-
+ 
 		for (int i = 0; i < table.length; i++) {
 			for (int j = 0; j < table[i].length; j++) {
 				table[i][j] = (int) ((Math.random() * range) - mini);

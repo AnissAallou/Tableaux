@@ -1,7 +1,7 @@
 package tableau1;
 
 
-public class Exo12 {
+ public class Exo12 {
 	public static void main(String [] args) 
 	{ 
 		

@@ -1,6 +1,6 @@
 package tableau2;
 
-public class Exo2 {
+public class Exo2 { 
 	
 	public static void main(String[] args) {
 	

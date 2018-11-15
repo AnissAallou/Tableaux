@@ -3,7 +3,7 @@ package tableau1;
 public class Exo7 {
 	public static void main(String [] args) 
 	{ 
-
+ 
 			
 			System.out.println("Exercice 7 Tableaux");
 

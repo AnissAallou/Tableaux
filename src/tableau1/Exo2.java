@@ -1,5 +1,5 @@
 package tableau1;
-
+  
 import java.util.Scanner;
 
 public class Exo2 {

@@ -97,7 +97,7 @@ public class Exo6 {
 				}else {
 					tab[i+1][j-1] = " X ";
 					i = i+1;
-					j = j-1;
+					j = j-1; 
 				}
 			}else if (player == 4) {
 				

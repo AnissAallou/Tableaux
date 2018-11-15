@@ -4,7 +4,7 @@ public class Exo3 {
 	
 	public static void main(String[] args) {
 			
-		
+		 
 		System.out.println("Exercice 3 Tableaux multidimensionnels");
 		
 		int[][] tableaux = new int[4][2]; 

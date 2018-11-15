@@ -1,7 +1,7 @@
 package tableau1;
 
 import java.util.Scanner;
-
+ 
 public class Exo9 {
 	public static void main(String [] args) 
 	{ 
