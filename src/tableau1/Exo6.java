@@ -21,7 +21,7 @@ public class Exo6 {
 			System.out.print(nombre[i] + " ");
 			}
 			
-
+			// On peut le faire en une boucle 
 			System.out.println("Version simplifiée");
 			nombre = new int[8];	
 			nombre[0] = -1;
