@@ -8,29 +8,41 @@ public class Exo2 {
 		
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
-				
-		System.out.println("Exercice 2 Tableaux");
 		
+
+	     
+	 	System.out.println("Exercice 2 Tableaux");
 		
-		System.out.println("saisir taille du tableau svp ! ");         
-		int taille = Integer.parseInt(sc.nextLine());         
-		int tableau [] = new int [taille];         
-		int elementsInverses [] = new int [taille];                  
-		for(int i = 0; i < tableau.length; i++) {             
-			System.out.println("saisir une valeur ");             
-			tableau  [i] =  Integer.parseInt(sc.nextLine());             
-			elementsInverses [ taille - 1 - i] = tableau  [i];         
-			}         
-		System.out.println("tableau : ");         
-		for(int i = 0; i <tableau .length; i++) {             
-			System.out.println( tableau  [i]);                      
-		}         System.out.println("tableau inverse:  ");         
+	 	// Ecrire un algorithme qui déclare un tableau de 10 notes scolaires, 
+	 	//dont on fait ensuite saisir les valeurs par l’utilisateur.
+	 	// La somme des nombres est affichée à l'utilisateur.
+	 	// La moyenne des notes de ce tableau est aussi affichée à l'utilisateur.
+	 	
+		int s;
+		int[] notes = new int[10];
+
+			
+			s = 0;
+
+			for(int i=0; i<10; i++) {
+				System.out.println("Entrez la note numéro : " + (i + 1));
+				// l’utilisateur de saisit les notes
+			    notes[i] = sc.nextInt();
+			    while (notes[i] < 0 || notes[i] > 20) {
+			    	System.out.println("Une note est comprise entre 0 et 20 : ");
+				    notes[i] = sc.nextInt();
+				    // Tant qu'il ne rentre pas des notes comprises entre 0 et 20, 
+				    // on signale à l'utilisateur que la saisie n'est pas valide 
+				    // et on lui demande de recommencer
+			    }
+				s = s + notes[i]; // on calcule la somme des notes 
+			}
+
+			System.out.println("somme : " + s + " moyenne : " + s/10); 
+			// on calcule la moyenne
+			
 		
-		for(int i = 0; i < elementsInverses.length; i++) {             
-			System.out.println( elementsInverses [i]);         
-		}
-		
-		
+		 
 		
 	}
 }
