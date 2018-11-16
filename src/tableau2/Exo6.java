@@ -3,7 +3,7 @@ package tableau2;
 import java.util.Scanner;
 
 public class Exo6 {
-	
+	 
 	public static void main(String[] args) {
 	
 
@@ -14,7 +14,7 @@ public class Exo6 {
 		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 
-		int player;
+		int player, i = 0 ,j=0; 
 		boolean game, c;
 		boolean r = game = c = true;
 		
@@ -39,7 +39,7 @@ public class Exo6 {
 
 		while (r == true) {
 			System.out.println("Quelle ligne ?");
-			int i = sc.nextInt();
+			i = sc.nextInt();
 			if (i>=0 && i<=10) {
 				r = false;
 			}else {
@@ -49,7 +49,7 @@ public class Exo6 {
 		}
 		while(c == true) {
 			System.out.println("Quelle colonne ?");
-			int j = sc.nextInt();
+			j = sc.nextInt();
 			if (j>=0 && j<=10) {
 				c = false;
 			}else {
@@ -59,17 +59,18 @@ public class Exo6 {
 		}
 
 		while (game) {
-			int i = 0;
-			int j = 0;
-			tab[i][j] = " O ";
 			
+			tab[i-1][j-1] = " O ";
+			int rowToForget = i;
+			int columnToForget = j;
 			affiche(tab);
-			System.out.println("Tu veux jouer où ? \nTapez 1 pour jouer en haut et à gauche\nTapez 2 pour jouer en haut et à droite\nTapez 3 pour jouer en bas et à gauche\nTapez 4 pour jouer en bas et à droite");
+			System.out.println("Tu veux jouer oÃ¹ ? \nTapez 1 pour jouer en haut et Ã  gauche\nTapez 2 pour jouer en haut et Ã  droite\nTapez 3 pour jouer en bas et Ã  gauche\nTapez 4 pour jouer en bas et Ã  droite");
 			player = sc.nextInt();
+			tab[rowToForget-1][columnToForget-1] = " X ";
 			if (player == 1) {
 				for(i=0; i<10; i++) {
 					for(j=0; j<10; j++) {
-				tab[i][j] = " O ";
+				tab[i][j] = " X ";
 					}
 				}
 				if (i==0 || j ==0) {
@@ -97,7 +98,7 @@ public class Exo6 {
 				}else {
 					tab[i+1][j-1] = " X ";
 					i = i+1;
-					j = j-1; 
+					j = j-1;
 				}
 			}else if (player == 4) {
 				
@@ -110,10 +111,14 @@ public class Exo6 {
 					j = j+1;
 					
 				}
-			}else if (player < 1 && player > 4) {
-				System.out.println("Entre 1 et 4 !");
+			} else if (player == 5) {
+				game = false;
+				System.out.println("ArrÃªt du jeu : ");
+				
+			} else if (player!=1 || player!=2 || player!=3 || player!=4 || player!=5 ) {
+				System.out.println("Entre 1 et 5 !");
 				player = sc.nextInt();
-			}
+			} 
 		}
 		System.out.println("GAME OVER !");
 	}
