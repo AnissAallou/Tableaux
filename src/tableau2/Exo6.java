@@ -33,28 +33,34 @@ public class Exo6 {
 		};
 		
 		
-		affiche(tab);
+		affiche(tab); // On utilise la méthode pour afficher le tableau et commencer le jeu
 		
 		
 
 		while (r == true) {
 			System.out.println("Quelle ligne ?");
 			i = sc.nextInt();
+			// On demande à l'utilisateur sur quelle ligne il veut commencer en abscisse
 			if (i>=0 && i<=10) {
 				r = false;
 			}else {
 				System.out.println("Entre 0 et 10 : ");
 				i= sc.nextInt();
+				// Il faut obligatorement saisir entre 0 et 10 pour ne pas sortir des 
+				// dimensions du damier
 			}
 		}
 		while(c == true) {
 			System.out.println("Quelle colonne ?");
 			j = sc.nextInt();
+			// On demande à l'utilisateur sur quelle colonne il veut commencer en ordonnée
 			if (j>=0 && j<=10) {
 				c = false;
 			}else {
 				System.out.println("Entre 0 et 10 : ");
 				j = sc.nextInt();
+				
+				
 			}
 		}
 
@@ -63,6 +69,7 @@ public class Exo6 {
 			tab[i-1][j-1] = " O ";
 			int rowToForget = i;
 			int columnToForget = j;
+			// on remet à "X" la case sur laquelle on a joué
 			affiche(tab);
 			System.out.println("Tu veux jouer où ? \nTapez 1 pour jouer en haut et à gauche\nTapez 2 pour jouer en haut et à droite\nTapez 3 pour jouer en bas et à gauche\nTapez 4 pour jouer en bas et à droite");
 			player = sc.nextInt();
@@ -114,9 +121,11 @@ public class Exo6 {
 			} else if (player == 5) {
 				game = false;
 				System.out.println("Arrêt du jeu : ");
+				// Si l'utilisateur en a marre de jouer :)
 				
 			} else if (player!=1 || player!=2 || player!=3 || player!=4 || player!=5 ) {
 				System.out.println("Entre 1 et 5 !");
+				// L'utilisateur ne peut que saisir les options entre 1 et 5
 				player = sc.nextInt();
 			} 
 		}
