@@ -6,9 +6,9 @@ public class Exo13 {
 	public static void main(String [] args) 
 	{ 
 		
-	// Toujours à partir de deux tableaux précédemment saisis, écrivez un algorithme 
-	//qui calcule le « JOKE » des deux tableaux. Pour calculer le « JOKE », 
-	// il faut multiplier chaque élément du tableau 1 par chaque élément du tableau 2, 
+	// Toujours Ã  partir de deux tableaux prÃ©cÃ©demment saisis, Ã©crivez un algorithme 
+	//qui calcule le Â« JOKE Â» des deux tableaux. Pour calculer le Â« JOKE Â», 
+	// il faut multiplier chaque Ã©lÃ©ment du tableau 1 par chaque Ã©lÃ©ment du tableau 2, 
 	// et additionner le tout. 
 		
 			System.out.println("Exercice 13 Tableaux");
@@ -22,8 +22,8 @@ public class Exo13 {
 				
 
 
-				for(int i=0; i<=3; i++) {
-					for(int j=0; j<=1; j++) { 
+				for(int i=0; i<=3; i++) { //on on imbrique deux boucles pour un tableau Ã  4 valeurs  
+					for(int j=0; j<=1; j++) { // et un tableau Ã  2 valeurs
 						joke = joke + (tab1[i] * tab2[j]); 
 						// On multiplie les indices du tableau 1 avec ceux du tableau 2
 						// et on additionne les produits entre eux
