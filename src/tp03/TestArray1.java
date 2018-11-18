@@ -11,8 +11,8 @@ public class TestArray1 {
 			
 			int[] array = {1, 15, -3, 0, 8, 7, 4, -2, 28, 7, -1, 17, 2, 3, 0, 14, -4};
 			
-			int grand = Integer.MIN_VALUE;
-			int petit = Integer.MAX_VALUE;
+			int grand = Integer.MIN_VALUE; // C'est la plus petite valeur que la classe numérique puisse représenter
+			int petit = Integer.MAX_VALUE; // C'est la valeur la plus élevée possible dans un type.
 			
 			// Afficher l’ensemble des éléments du tableau grâce à une boucle
 			
