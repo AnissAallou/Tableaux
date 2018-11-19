@@ -1,74 +1,99 @@
 package tableau2;
 
+import java.util.Scanner;
+
 public class Exo5 {
 	 
 	public static void main(String[] args) {
 	
-	 System.out.println("Exercice 2 Tableaux multidimensionnels");
-     
-	   	int[][] tablea = new int[2][3]; 
-		int valeur = 0;
-
-		for(int i=0; i<=1; i++) {
-			for(int j=0; j<=2; j++) {
-				tablea[i][j] = valeur;
-				valeur++;
-			}
-		}
-		
-		
-		System.out.println("Exercice 3 Tableaux multidimensionnels");
-		
-		int[][] tableaux = new int[4][2]; 
-		
-		for(int i=3; i>=0; i--) {
-			for(int j=1; j>=0; j--) {
-				tableaux[i][j] = j;
-			}
-		}
-		
-		for(int i=0; i<=3; i++) {
-			for(int j=0; j<=1; j++) {
-				System.out.println(tableaux[i][j]);
-			}
-		}
-		
-		
-		
-		System.out.println("Exercice 4 Tableaux multidimensionnels");
-
-
-		int mini = 0;
-		int max = 2150;
-		int range = max - mini ;
-		int imax = 0;
-		int jmax = 0;
-		int mmax = 0;
-
-		int[][] table = new int[12][8];
-
-		for (int i = 0; i < table.length; i++) {
-			for (int j = 0; j < table[i].length; j++) {
-				table[i][j] = (int) ((Math.random() * range) - mini);
-				if (table[i][j] > mmax) {
-					mmax = table[i][j];
-					imax = i;
-					jmax = j;
-				}System.out.print (table[i][j]+" ");
-			}					
-		}
-		System.out.println();
-		System.out.println("Le plus grand �l�ment est " + mmax + " et il se trouve aux indices " + imax + "," + jmax);
-		
-		
-		
-		
+	 
 		System.out.println("Exercice 5 Tableaux multidimensionnels");
 		
 		
+		int [][] resultats = new int [4][3];
 		
-		int[][] notes = new int[4][3];   for(int=0; i<tab.length; i++) {
+		int moyenne = 0;
+		int moyenneJS = 0;
+		int moyenneJava = 0;
+		int moyenneCS = 0;
+		int moyenneHTMLCSS = 0;
+		
+		@SuppressWarnings("resource")
+		Scanner sc = new Scanner(System.in);
+		
+		// L'utilisateur saisit les notes :
+		
+		for(int i = 0; i<resultats.length; i++) {
+			if(i==0) { // i nous permet d'avancer de matière en matière et vérifie 
+				// auparavant que l'on a bien saise toutes les notes pzr matière
+				System.out.println("\nNotes JavaScript : ");
+			}
+			if(i==1) {
+				System.out.println("\nNotes Java : ");
+			}
+			if(i==2) {
+				System.out.println("\nNotes C# : ");
+			}
+			if(i==3) {
+				System.out.println("\nNotes HTML/CSS : ");
+			}
+			for(int j = 0; j<resultats[i].length; j++) { // j nous permet la saise des notes pour chaque matière
+				System.out.println("Note numéro " + (j+1) + " : ");
+				resultats[i][j]= sc.nextInt();
+				
+			}
+		}	
+		
+		// Afficher la moyenne :
+
+		for(int i = 0; i<resultats.length; i++) {
+
+				if(i == 0) {
+					for(int j = 0; j<resultats[i].length; j++) {
+					
+						moyenne += resultats[i][j];
+						
+					}
+					 moyenneJS = moyenne/resultats[i].length;
+					System.out.println("\nMoyenne JS : " + (moyenne/resultats[i].length));
+				}
+				if(i == 1) {
+					moyenne = 0;
+					for(int j = 0; j<resultats[i].length; j++) {
+				
+						moyenne += resultats[i][j];
+						
+					}
+					moyenneJava = moyenne/resultats[i].length;
+					System.out.println("Moyenne Java : " + (moyenne/resultats[i].length));
+				}
+				if(i == 2) {
+					moyenne = 0;
+					for(int j = 0; j<resultats[i].length; j++) {
 			
+						moyenne += resultats[i][j];
+		
+					}
+					moyenneCS = moyenne/resultats[i].length;
+					System.out.println("Moyenne C# : " + (moyenne/resultats[i].length));
+				}
+				if(i == 3) {
+					moyenne = 0;
+					for(int j = 0; j<resultats[i].length; j++) {
+				
+						moyenne += resultats[i][j];
+				
+					}
+					moyenneHTMLCSS = moyenne/resultats[i].length;
+					System.out.println("Moyenne HTML/CSS : " + (moyenne/resultats[i].length));
+				}
+
 		}
-	}
+		
+		// moyenne générale
+		System.out.println("Moyenne générale : " + ((moyenneJS +moyenneJava + moyenneCS + moyenneHTMLCSS)/4));
+		
+
+		}
+	
 }
